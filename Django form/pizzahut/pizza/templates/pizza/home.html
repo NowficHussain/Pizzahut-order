@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzahut's Pizza Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Background and Text Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?fit=crop&w=1500&q=80'); /* Replace with your preferred image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            overflow-x: hidden;
+        }
+        /* Overlay to darken background */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        /* Content Container */
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: 20vh;
+            color: #f8f9fa;
+        }
+        .content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .content p {
+            font-size: 1.25rem;
+        }
+        /* Order Button */
+        .order-btn {
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .order-btn:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+            .order-btn {
+                font-size: 1.2rem;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Overlay for Darkening Background Image -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to Pizzahut's Pizza Shop</h1>
+        <p>Experience the taste of freshly made pizzas with a variety of toppings to choose from.</p>
+        <a href="{% url 'order' %}" class="order-btn"><i class="fas fa-pizza-slice"></i> Order Pizza</a>
+    </div>
+
+    <!-- Bootstrap JS and Font Awesome (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
